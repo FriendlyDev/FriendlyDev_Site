@@ -1,0 +1,193 @@
+html {
+    overflow : auto;
+}
+
+body {
+    -webkit-font-smoothing : antialiased;
+    background : #0a0a0a;
+    filter : progid : DXImageTransform.Microsoft.DropShadow(color=#333333, offX = 0, offY = 1);
+    font-family : 'Helvetica Neue', Sans-Serif, Arial;
+    overflow : auto !important;
+    text-shadow : rgba(0,0,0,0.5) 0 1px 3px;
+}
+
+body.firefox.mac {
+    font-family : Arial, Sans-Serif;
+    text-shadow : rgba(0, 0, 0, 0.5) 0 1px 3px;
+}
+
+.main {
+    height : 695px;
+    width : 600px;
+}
+
+.wrapper {
+    bottom : 0;
+    left : 0;
+    overflow : hidden;
+    position : absolute;
+    right : 0;
+    top : 0;
+    z-index : 50;
+}
+
+.background-container {
+    bottom : 0;
+    left : 0;
+    min-height : 600px;
+    min-width : 695px;
+    overflow : hidden;
+    position : absolute;
+    right : 0;
+    top : 0;
+    z-index : 0;
+}
+
+.main.error {
+    height : 100%;
+    left : 0;
+    max-height : 1800px;
+    min-height : 600px;
+    min-width : 695px;
+    position : absolute;
+    right : 0;
+    top : -97px;
+    width : 100%;
+}
+
+.heading {
+    color : #fff;
+    font-size : 40px;
+    font-weight : 700;
+    height : 63px;
+    padding-top : 359px;
+    text-align : center;
+}
+
+.error .heading {
+    bottom : -76px;
+    height : 50%;
+    left : 0;
+    padding-top : 0;
+    position : absolute;
+    right : 0;
+    width : 100%;
+}
+
+.textBody {
+    color : #d3d4d5;
+    font-size : 19px;
+    font-weight : 400px;
+    line-height : 24px;
+    text-align : center;
+}
+
+.error .textBody {
+    font-weight : 400;
+    margin-left : auto;
+    margin-right : auto;
+    padding-top : 15px;
+    width : 560px;
+}
+
+.copyright {
+    background : url(https : //www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/Logo.png) center center no-repeat;
+    color : #8b8b8b;
+    font-size : 11px;
+    height : 30px;
+    letter-spacing : normal;
+    margin-top : 11px;
+    padding-top : 29px;
+    text-align : center;
+    width : 100%;
+}
+
+.error .copyright {
+    background : url(https : //www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/Logo.png) center center no-repeat;
+    bottom : -77px;
+    left : 0;
+    line-height : 46px;
+    margin-top : 526px;
+    min-width : 695px;
+    position : absolute;
+    right : 0;
+}
+
+center {
+    z-index : 50;
+}
+
+.error {
+    -khtml-user-select : none;
+    -moz-user-select : 0;
+    -o-user-select : none;
+    -webkit-user-select : none;
+    cursor : default;
+    user-select : none;
+}
+
+.icloud-tile {
+    position : absolute;
+    z-index : 100;
+}
+
+.radial {
+    background : url(https://www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/bg_radial.png);
+    background-size : 1792px 1280px;
+    height : 1280px;
+    left : 50%;
+    margin-left : -896px;
+    margin-top : -640px;
+    position : absolute;
+    top : 50%;
+    width : 1792px;
+    z-index : 11;
+}
+
+.tiles {
+    background : url(https://www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/bg_tile.jpg);
+    height : 1280px;
+    left : 50%;
+    margin-left : -896px;
+    margin-top : -640px;
+    position : absolute;
+    top : 50%;
+    width : 1792px;
+    z-index : 10;
+}
+
+.copyright-text {
+    -webkit-font-smoothing : antialiased;
+    bottom : 15px;
+    color : rgba(128,128,128,0.25);
+    font-family : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size : 11px;
+    height : 20px;
+    left : 20px;
+    position : absolute;
+    right : 20px;
+    text-align : right;
+    text-rendering : optimizelegibility;
+    text-shadow : rgba(0,0,0,0.13) 0 1px 2px;
+    z-index : 200;
+}
+
+@media only screen and -webkit-min-device-pixel-ratio 2 {
+    .copyright,.error .copyright {
+        background : url(https://www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/Logo@2x.png) center center no-repeat;
+        background-size : 17px 21px;
+    }
+}
+
+*[unselectable=on] {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}

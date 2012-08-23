@@ -1,0 +1,651 @@
+/*------------------------------------*\
+    FriendlyDev.com styles
+    Authored, maintained, and cared for by @djekl
+
+    CONTENTS
+    ========
+
+    RESET
+    TYPE
+    SHARED
+    OBJECTS
+    MAIN
+    HEADER
+    NAV
+    PAGE
+    LANDING
+    ADS
+    BILLS
+    FAQS
+    FORMS
+    BANNER
+    FOOTER
+    MEDIA-QUERIES
+    OTHER
+
+    Prefixed with "$" for easy searching.
+\*------------------------------------*/
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+input[type=password] {
+    appearance: caps-lock-indicator;
+}
+
+/*------------------------------------*\
+    $TYPE
+\*------------------------------------*/
+
+@font-face {
+    font-family: 'ModernPictogramsNormal';
+    src: url('fonts/modernpics-webfont.eot');
+    src: url('fonts/modernpics-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/modernpics-webfont.woff') format('woff'),
+         url('fonts/modernpics-webfont.ttf') format('truetype'),
+         url('fonts/modernpics-webfont.svg#ModernPictogramsNormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    line-height: 1;
+}
+
+h3 {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/*------------------------------------*\
+    $SHARED
+\*------------------------------------*/
+
+a, a:visited {
+    color: #ff5e3c;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e54120;
+}
+
+mark {
+    background: #fd8;
+    color: #111;
+}
+
+/*------------------------------------*\
+    $OBJECTS
+\*------------------------------------*/
+
+.assistive {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+.icon {
+    font-family: 'ModernPictogramsNormal';
+    font-weight: 400;
+}
+
+.cta, .cta:visited {
+    color: #fff;
+    background: #17a1e5;
+    line-height: 1;
+    padding: .5em 1.5em;
+    border-radius: 5px;
+}
+
+.cta:hover {
+    background: #17a;
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    clear: both;
+    height: 0;
+    display: block;
+    margin: 15px 0 15px 0;
+}
+
+.wrap {
+    max-width: 940px;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+
+::selection {
+    color: #111;
+    background-color: rgba(255,200,0,.3);
+    text-shadow: none;
+}
+
+::-moz-selection {
+    color: #111;
+    background-color: rgba(255,200,0,.3);
+    text-shadow: none;
+}
+
+html, body {
+    font-family: proxima-nova, Proxima Nova, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #222;
+    font-size: 100%;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+.header {
+    background: #17a1e5;
+    color: #fff;
+    margin-top: -10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+    .header a, .header a:visited {
+        color: #fff;
+    }
+
+        .header a:hover {
+            text-decoration: none;
+            color: #eee;
+            color: rgba(255,255,255,.9);
+        }
+
+    .header .home_link {
+        font-family: futura-pt, Futura, Helvetica, sans-serif;
+        text-transform: lowercase;
+        font-style: oblique;
+        font-size: 2em;
+        float: left;
+    }
+
+/*------------------------------------*\
+    $NAV
+\*------------------------------------*/
+
+    .header nav {
+        float: right;
+        line-height: 1;
+    }
+
+        .header nav li {
+            float: left;
+            margin-left: 30px;
+        }
+
+        .header nav a {
+            display: block;
+            float: left;
+            padding: 15px;
+            margin: -15px;
+        }
+
+            .header nav a:hover, .header a.active {
+                background: #148fcc;
+                color: #fff;
+                box-shadow: inset 0 -3px rgba(0,0,0,.2);
+            }
+
+/*------------------------------------*\
+    $PAGE
+\*------------------------------------*/
+
+.content {
+    margin-top: 40px;
+}
+
+/*------------------------------------*\
+    $LANDING
+\*------------------------------------*/
+
+.landing {
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1;
+    color: #999;
+    text-align: center;
+    margin-bottom: 58px;
+}
+
+    .landing h1 {
+        font-family: futura-pt, Futura, Helvetica, sans-serif;
+        color: #17a1e5;
+        font-size: 5em;
+        line-height: 1;
+        margin-bottom: .5em;
+        text-transform: lowercase;
+        font-style: oblique;
+        font-weight: 700;
+        -webkit-animation: dontneedroads .75s linear, excite .5s linear;
+        -webkit-animation-delay: 0, .75s;
+        -webkit-animation-fill-mode: forwards forwards;
+        -moz-animation: dontneedroads .75s linear, excite .5s linear;
+        -moz-animation-delay: 0, .75s;
+        -moz-animation-fill-mode: forwards forwards;
+        animation: dontneedroads .75s linear, excite .5s linear;
+        animation-delay: 0, .75s;
+        animation-fill-mode: forwards forwards;
+    }
+
+    .landing p {
+        -webkit-animation: apparate .75s ease-in-out;
+        -webkit-animation-delay: 1.25s;
+        -webkit-animation-fill-mode: both;
+        -moz-animation: apparate .75s ease-in-out;
+        -moz-animation-delay: 1.25s;
+        -moz-animation-fill-mode: both;
+        animation: apparate .75s ease-in-out;
+        animation-delay: 1.25s;
+        animation-fill-mode: both;
+    }
+
+.hero {
+    display: inline-block;
+    margin: 10px auto;
+    width: 250px;
+}
+
+/*------------------------------------*\
+    $ADS
+    Not yet in use. Maybe in the future.
+\*------------------------------------*/
+
+.ad {
+    float: right;
+    width: 180px;
+    padding: 10px;
+    background: #eee;
+    border: 1px solid #ddd;
+    color: #666;
+    font-size: .725em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.ad img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.ad p {
+    margin: 0;
+}
+
+/*------------------------------------*\
+    $BILLS
+\*------------------------------------*/
+
+header[role="outgoings"] {
+    margin-bottom: 15px;
+}
+
+header[role="outgoings"] h2 {
+    margin: .25em 0;
+}
+
+.safe, .unsafe, .frugal {
+    -webkit-animation: dropit .75s linear;
+    position: relative;
+    color: #fff;
+    padding: .15em .25em;
+    line-height: 1.2;
+    border-radius: 5px;
+}
+
+.safe {
+    background: #579d1f;
+}
+
+.unsafe {
+    background: #fe5741;
+}
+
+.frugal {
+    background: #ff6400;
+}
+
+.outgoings {
+    margin: 0 0 -1px;
+    padding: 0;
+    -webkit-animation: apparate .5s ease-in-out;
+    -moz-animation: apparate .5s ease-in-out;
+    animation: apparate .5s ease-in-out;
+    position: relative;
+    z-index: 99;
+}
+
+    .outgoings li {
+        list-style: none;
+        margin: 0;
+        width: auto;
+        padding: .5em 1em;
+        background: #f1f8fc;
+        border-bottom: 1px solid #bde;
+        min-height: 69px;
+        position: relative;
+        border-left: .5em solid #222;
+        color: #222;
+        z-index: 100;
+        overflow: hidden;
+    }
+
+    .outgoings li:nth-of-type(2n-1) {
+        background: #e4f1f8;
+    }
+
+        .outgoings li:hover {
+            background: #d6ebf5;
+        }
+
+        .outgoings li h2 {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .outgoings li p {
+            margin: 0 0 .5em;
+        }
+
+    .outgoings .hoverrr {
+        color: #222;
+        cursor: default;
+    }
+
+    .outgoings .hoverrr:hover {
+        text-decoration: none;
+    }
+
+    .outgoings .cost {
+        font-size: 3em;
+        font-weight: 700;
+        margin-left: .5em;
+    }
+
+        .item_controls {
+            float: right;
+            margin-top: -.5em;
+            margin-bottom: -.5em;
+            margin-right: -4em;
+            margin-left: 1em;
+            -webkit-transition: .3s;
+            height: 100%;
+        }
+
+            .control_link {
+                display: block;
+                padding: .4em;
+                background: #fff;
+                color: #17a1e5;
+                -webkit-transition: .3s ease;
+                text-align: center;
+                height: 50%;
+                width: 3em;
+            }
+
+            .control_link .icon {
+                display: inline-block;
+                font-size: 2em;
+                line-height: 1;
+            }
+
+                .control_link.delete {
+                    background: #fe5741;
+                    color: #fff;
+                }
+
+
+            .outgoings li:hover .item_controls, .showControls .item_controls {
+                margin-right: -1em;
+            }
+
+/*------------------------------------*\
+    $FAQS
+\*------------------------------------*/
+
+.faq {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    max-width: 600px;
+}
+
+    .faq li {
+        list-style: none;
+    }
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+.fillerup {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+    .fillerup label {
+        display: block;
+        font-weight: 700;
+        color: #444;
+    }
+
+    .fillerup input, .fillerup textarea {
+        width: 96%;
+        padding: 2%;
+        margin: 10px 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        -webkit-transition: .3s;
+           -moz-transition: .3s;
+             -o-transition: .3s;
+                transition: .3s;
+    }
+
+        .fillerup input:focus, .fillerup textarea:focus {
+            border-color: #ff5e3c;
+            outline: none;
+            box-shadow: 0 0 10px rgba(255,94,60, .4);
+        }
+
+    .fillerup textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .fillerup input[type="submit"], .butt {
+        width: auto;
+        color: #fff;
+        background: #17a1e5;
+        border: none;
+        font-weight: 700;
+        padding: 2%;
+        border-radius: 5px;
+    }
+
+    .fillerup input[type="submit"]:hover, .fillerup input[type="submit"]:focus, .butt:hover, .butt:focus {
+        background: #148fcc;
+        color: #fff;
+    }
+
+    .fillerup select {
+        margin: 10px 0;
+        font-weight: 400;
+    }
+
+        .ddown {
+            padding: .5em 2em .5em .5em;
+            font-weight: 700;
+            color: #444;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff url(images/ddown.png) no-repeat right center;
+            margin-right: 1em;
+        }
+
+    .del_account {
+        margin-top: 15px;
+    }
+
+/*------------------------------------*\
+    $BANNER
+\*------------------------------------*/
+
+.notice {
+    background-color: #fd7;
+    color: #222;
+    color: rgba(0,0,0,.7);
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+}
+
+    .notice a {
+        color: #17a1e5;
+    }
+
+    .notice p {
+        margin:
+    }
+
+    .notice .wrap {
+        position: relative;
+        z-index: 2;
+    }
+
+    .notice:after {
+        content: '';
+        background-image: -webkit-linear-gradient(-45deg, transparent 0%,
+                          transparent 25%, hsla(0,0%,100%,.3) 25%,
+                          hsla(0,0%,100%,.3) 50%, transparent 50%,
+                          transparent 75%, hsla(0,0%,100%,.3) 75%,
+                          hsla(0,0%,100%,.3) 100%);
+        background-image: -moz-linear-gradient(-45deg, transparent 0%,
+                          transparent 25%, hsla(0,0%,100%,.3) 25%,
+                          hsla(0,0%,100%,.3) 50%, transparent 50%,
+                          transparent 75%, hsla(0,0%,100%,.3) 75%,
+                          hsla(0,0%,100%,.3) 100%);
+        background-image: -o-linear-gradient(-45deg, transparent 0%,
+                          transparent 25%, hsla(0,0%,100%,.3) 25%,
+                          hsla(0,0%,100%,.3) 50%, transparent 50%,
+                          transparent 75%, hsla(0,0%,100%,.3) 75%,
+                          hsla(0,0%,100%,.3) 100%);
+        background-image: linear-gradient(-45deg, transparent 0%,
+                          transparent 25%, hsla(0,0%,100%,.3) 25%,
+                          hsla(0,0%,100%,.3) 50%, transparent 50%,
+                          transparent 75%, hsla(0,0%,100%,.3) 75%,
+                          hsla(0,0%,100%,.3) 100%);
+        background-size: 20px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-mask-image: -webkit-linear-gradient(#000, transparent);
+        z-index: 1;
+    }
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+footer[role="footer"] {
+    color: #999;
+    border-top: 1px solid #d6d6d6;
+}
+
+footer[role="footer"] iframe {
+    width: 130px !important;
+}
+
+/*------------------------------------*\
+    $MEDIA-QUERIES
+\*------------------------------------*/
+
+@media screen and (max-width: 750px) {
+    header nav li a[href*='bills'] {
+        display: none;
+    }
+
+    .header nav li a {
+        padding: 10px;
+        margin: -10px -15px;
+    }
+
+    .landing {
+        font-size: .825em;
+    }
+
+    #preview {
+        display: none;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1em;
+    }
+
+    .outgoings .cost {
+        font-size: 2em;
+    }
+
+    header[role="outgoings"] [class*="align"] {
+        float: none;
+    }
+
+    .header nav li:first-child {
+        margin-left: 0;
+    }
+}
+
+/*------------------------------------*\
+    $OTHER
+\*------------------------------------*/
+
+.zoomBar {
+    display: none !important;
+}

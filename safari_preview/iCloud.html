@@ -1,0 +1,57 @@
+<!-- IMPORTANT NOTE: This file is licensed only for use in providing the iCloud service,
+    or any part thereof, and is subject to the iCloud Terms and Conditions. You may not
+    port this file to another platform without Apple's written consent. -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>iCloud</title>
+    <link href="apple_style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload="go()">
+    <script type="text/javascript">
+        /*if(navigator.loadPurpose!=="preview") {
+            location = "https://www.icloud.com/"
+        }*/
+        function go() {
+            window.tile = document.getElementById("tile");
+            onresize()
+        }
+        window.onresize = function() {
+            var ww = innerWidth,
+                wh = innerHeight,
+                wa = ww/wh,
+                tw = 670,
+                th = 670,
+                ta = tw/th,
+                w,
+                h;
+            if (wa>ta) {
+                h = Math.min(th, wh);
+                w = h * ta
+            }
+            else {
+                w = Math.min(tw, ww);
+                h = w / ta
+            }
+            tile.style.width = w + "px";
+            tile.style.height = h + "px";
+            tile.style.left = ww / 2 - w / 2 + "px";
+            tile.style.top = wh / 2 - h / 2 + (30 * h / th) + "px"
+        };
+    </script>
+    <div class="wrapper">
+        <img id="tile" src="https://www.icloud.com/static_pages/topsites_preview/en-us/1L50/source/resources/images/icloud_tile.png" class="icloud-tile">
+        <div class="radial"></div>
+        <div class="tiles"></div>
+        <div class="copyright-text">
+            <script type="text/javascript">
+                var date = new Date(), year = date.getFullYear();
+                document.write('<div class="footer"> Copyright &copy; ' + year + " FriendlyDev. All rights reserved.</div>");
+            </script>
+        </div>
+    </div>
+</body>
+</html>
